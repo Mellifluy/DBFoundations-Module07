@@ -1,37 +1,19 @@
-## Welcome to GitHub Pages
+# SQL Functions
 
-You can use the [editor on GitHub](https://github.com/Mellifluy/DBFoundations-Module07/edit/docs/docs/index.md) to maintain and preview the content for your website in Markdown files.
+#### Introduction
+In Module 7, we learn about SQL functions. This paper explains when one would use a SQL User Defined Function (UDF). It also discusses the differences between Scalar, In-Line, and Multi-Statement functions.  
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+#### SQL User Defined Functions
+There are many built-in functions in SQL Server, but users can also write their own custom functions or UDFs. You can do this to make coding more efficient and avoid writing out the same code time after time. Sometimes you cannot find a system function that meets your needs, then that is when UDFs can be the solution. 
 
-### Markdown
+#### Scalar, In-Line, and Multi-Statement Functions
+There are different kinds of UDFs. 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+A scalar function returns a single value (e.g. text, number, date). It cannot update data, but can call other functions.
 
-```markdown
-Syntax highlighted code block
+An in-line function returns a single set of rows. Inline functions usually perform better than multi-statement functions.
 
-# Header 1
-## Header 2
-### Header 3
+A multi-statement function returns a table of data. You can include multiple select statements and other complexities in a multi-statement function.
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Mellifluy/DBFoundations-Module07/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+#### Conclusion
+In essence, a function accepts inputs in the form of parameters and returns a value. Depending on the type of task you would like to perform, you can choose functions ranging from simple to complex. Functions are very useful for processing and manipulating data. If you cannot find a built-in function that works, you also have the ability to create your own user defined function. These functions make the database development process easier and help to avoid rewriting the same code again.
